@@ -3,7 +3,7 @@ import { Component, Injectable, OnInit } from '@angular/core';
 @Component({
     selector: 'app-profile',
     templateUrl: './not-found.component.html',
-    styleUrls: [ './not-found.component.css' ]
+    styleUrls: ['./not-found.component.scss']
 })
 
 @Injectable()

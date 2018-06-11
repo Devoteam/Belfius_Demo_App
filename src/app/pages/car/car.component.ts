@@ -10,7 +10,6 @@ export class CarComponent implements OnInit {
   constructor() { }
 
     public ngOnInit() {
-        window.dispatchEvent(new Event('resize'));
     }
 
 }

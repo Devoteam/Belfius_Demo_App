@@ -5,13 +5,12 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: [ './app-nav.component.css' ],
     templateUrl: './app-nav.component.html'
 })
-export class AppNavComponent implements OnInit{
+export class AppNavComponent implements OnInit {
 
     constructor() {
-
     }
 
     public ngOnInit() {
-        window.dispatchEvent(new Event('resize'));
     }
+
 }

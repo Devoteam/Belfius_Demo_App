@@ -8,10 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppContentComponent implements OnInit {
 
     constructor() {
-
     }
 
     public ngOnInit() {
-        window.dispatchEvent(new Event('resize'));
     }
 }

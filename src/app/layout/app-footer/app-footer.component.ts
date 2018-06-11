@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-@Component( {
+@Component({
     selector: 'app-footer',
     styleUrls: ['./app-footer.component.css'],
     templateUrl: './app-footer.component.html'
@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppFooterComponent {
 
     constructor() {
-
     }
+
 }

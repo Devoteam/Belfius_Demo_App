@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Injectable } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-homepage',
@@ -14,6 +13,6 @@ export class HomepageComponent implements OnInit {
     }
 
     public ngOnInit() {
-        window.dispatchEvent(new Event('resize'));
     }
+
 }

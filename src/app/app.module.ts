@@ -13,6 +13,7 @@ import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CarModelsComponent } from './pages/car-models/car-models.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const layout = [
     AppComponent,
@@ -32,7 +33,8 @@ const modules = [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
 ];
 
 const routing = [

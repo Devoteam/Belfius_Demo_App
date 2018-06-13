@@ -1,0 +1,20 @@
+<div class="content-header">
+  <div class="container-fluid">
+
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Models</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row justify-content-around">
+      <mat-card class="mb-1 mb-lg-3 mouse-pointer light-gray-hover col-lg-5" *ngFor="let carModel of carModels">
+        <mat-card-title>{{carModel.name}}</mat-card-title>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

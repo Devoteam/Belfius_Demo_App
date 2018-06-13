@@ -22,7 +22,7 @@ const routes: Routes = [
             },
             {
                 component: CarComponent,
-                path: 'cars'
+                path: 'cars/overview'
             },
             {
                 path: '404',

@@ -1,7 +1,7 @@
 import { CarBrand } from './car-brand';
 import { CarModel } from './car-model';
 
-export interface Car {
+export class Car {
     id: number;
     cost: number;
     fuelConsumption: number;

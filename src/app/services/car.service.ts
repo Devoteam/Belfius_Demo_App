@@ -32,7 +32,7 @@ export class CarService {
     getCar(carModelId: number): Observable<Car> {
         return this.http.get<Car>(`${GET_CAR_BY_CAR_MODEL_ID}${carModelId}`)
             .pipe(
-                catchError(handleApiError('getCar', {}))
+                catchError(handleApiError('getCar', new Car()))
             );
     }
 

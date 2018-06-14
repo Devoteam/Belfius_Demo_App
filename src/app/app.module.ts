@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CarModelsComponent } from './pages/car-models/car-models.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CarDetailComponent } from './pages/car-detail/car-detail.component';
 
 const layout = [
     AppComponent,
@@ -26,7 +27,8 @@ const components = [
     HomepageComponent,
     NotFoundComponent,
     CarOverviewComponent,
-    CarModelsComponent
+    CarModelsComponent,
+    CarDetailComponent
 ];
 
 const modules = [
@@ -45,7 +47,7 @@ const routing = [
     bootstrap: [AppComponent],
     declarations: [
         layout,
-        components
+        components,
     ],
     imports: [
         modules,

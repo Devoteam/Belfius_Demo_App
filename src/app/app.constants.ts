@@ -11,7 +11,7 @@ const CAR_MODELS_PREFIX = '/models';
 
 export const GET_ALL_CAR_BRANDS = `${BASE_API_URL}${CAR_PREFIX}${CAR_BRANDS_PREFIX}/all`;
 export const GET_CAR_MODELS_BY_BRAND_ID = `${BASE_API_URL}${CAR_PREFIX}${CAR_MODELS_PREFIX}?carBrandId=`;
-
+export const GET_CAR_BY_CAR_MODEL_ID = `${BASE_API_URL}${CAR_PREFIX}?carModelId=`;
 
 export function handleApiError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
@@ -21,3 +21,8 @@ export function handleApiError<T>(operation = 'operation', result?: T) {
         return of(result as T);
     };
 }
+
+export const RequestParams = {
+    CAR_BRAND_ID: 'carBrandId',
+    CAR_MODEL_ID: 'carBrandId'
+};

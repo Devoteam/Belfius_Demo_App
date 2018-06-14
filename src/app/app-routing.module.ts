@@ -6,6 +6,8 @@ import { CarOverviewComponent } from './pages/car-overview/car-overview.componen
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CarModelsComponent } from './pages/car-models/car-models.component';
+import { CarDetailComponent } from './pages/car-detail/car-detail.component';
+import { RequestParams } from './app.constants';
 
 const routes: Routes = [
     {
@@ -27,7 +29,11 @@ const routes: Routes = [
             },
             {
                 component: CarModelsComponent,
-                path: 'cars/models/:id'
+                path: `cars/models/:${RequestParams.CAR_BRAND_ID}`
+            },
+            {
+                component: CarDetailComponent,
+                path: `cars/details/:${RequestParams.CAR_MODEL_ID}`
             },
             {
                 path: '404',

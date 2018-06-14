@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { CarModel } from '../../Interfaces/car-model';
 import { CarService } from '../../services/car.service';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
+import { RequestParams } from '../../app.constants';
 
 @Component({
     selector: 'app-car-models',
     templateUrl: './car-models.component.html',
-    styleUrls: ['./car-models.component.css']
+    styleUrls: ['./car-models.component.scss']
 })
 export class CarModelsComponent implements OnInit {
 
@@ -17,7 +17,6 @@ export class CarModelsComponent implements OnInit {
 
     constructor(private carService: CarService,
                 private route: ActivatedRoute,
-                private location: Location,
                 media: ObservableMedia) {
         media.asObservable()
             .subscribe((change: MediaChange) => {
@@ -34,13 +33,9 @@ export class CarModelsComponent implements OnInit {
     }
 
     getCarModels(): void {
-        const carBrandId = +this.route.snapshot.paramMap.get('id');
+        const carBrandId = +this.route.snapshot.paramMap.get(RequestParams.CAR_BRAND_ID);
         this.carService.getCarModels(carBrandId)
             .subscribe(carModels => this.carModels = carModels);
-    }
-
-    goBack(): void {
-        this.location.back();
     }
 
 }

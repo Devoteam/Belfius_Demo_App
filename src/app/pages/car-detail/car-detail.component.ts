@@ -3,6 +3,7 @@ import { CarService } from '../../services/car.service';
 import { RequestParams } from '../../app.constants';
 import { Car } from '../../Interfaces/car';
 import { ActivatedRoute } from '@angular/router';
+import { resizeWindow } from '../../app.utils';
 
 @Component({
     selector: 'app-car-detail',
@@ -16,6 +17,7 @@ export class CarDetailComponent implements OnInit {
 
     constructor(private carService: CarService,
                 private route: ActivatedRoute) {
+        resizeWindow();
     }
 
     ngOnInit() {

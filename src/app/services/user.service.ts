@@ -2,21 +2,22 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { CarBrand } from '../Interfaces/car-brand';
-import { GET_ALL_CAR_BRANDS, handleApiError } from '../app.constants';
+import { LOGIN } from '../app.constants';
+import { User } from '../Interfaces/user';
+import { handleApiError, JSON_HEADERS_WITH_RESPONSE } from '../app.utils';
 
 @Injectable({
     providedIn: 'root'
 })
-export class CarService {
+export class UserService {
 
     constructor(private http: HttpClient) {
     }
 
-    login(): Observable<CarBrand[]> {
-        return this.http.get<CarBrand[]>(GET_ALL_CAR_BRANDS)
+    login(user: User): Observable<any> {
+        return this.http.post<User>(LOGIN, user, JSON_HEADERS_WITH_RESPONSE)
             .pipe(
-                catchError(handleApiError('getCarBrands', []))
+                catchError(handleApiError('login'))
             );
     }
 

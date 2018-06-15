@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { removeJwtTokenFromLocalstorage } from '../../app.utils';
 
 @Component({
     selector: 'app-nav',
@@ -16,6 +17,10 @@ export class AppNavComponent implements OnInit {
 
     goBack(): void {
         this.location.back();
+    }
+
+    logout(): void {
+        removeJwtTokenFromLocalstorage();
     }
 
 }

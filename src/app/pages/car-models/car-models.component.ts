@@ -4,6 +4,7 @@ import { CarModel } from '../../Interfaces/car-model';
 import { CarService } from '../../services/car.service';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { RequestParams } from '../../app.constants';
+import { resizeWindow } from '../../app.utils';
 
 @Component({
     selector: 'app-car-models',
@@ -18,6 +19,7 @@ export class CarModelsComponent implements OnInit {
     constructor(private carService: CarService,
                 private route: ActivatedRoute,
                 media: ObservableMedia) {
+        resizeWindow();
         media.asObservable()
             .subscribe((change: MediaChange) => {
                 if (change.mqAlias === 'lg') {

@@ -16,6 +16,7 @@ import { CarModelsComponent } from './pages/car-models/car-models.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarDetailComponent } from './pages/car-detail/car-detail.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const layout = [
     AppComponent,
@@ -38,7 +39,8 @@ const modules = [
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
 ];
 
 const routing = [

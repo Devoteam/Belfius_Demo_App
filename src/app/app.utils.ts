@@ -1,6 +1,6 @@
 import { JWT_TOKEN_KEY } from './app.constants';
 import { HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 export const jwtToken = localStorage.getItem(JWT_TOKEN_KEY);
 
@@ -36,5 +36,11 @@ export function handleApiError<T>(operation = 'operation', result?: T) {
 
 export function resizeWindow() {
     window.dispatchEvent(new Event('resize'));
+}
+
+export const loadingstatus: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+export function setLoadingStatus(status: boolean) {
+    loadingstatus.next(status);
 }
 

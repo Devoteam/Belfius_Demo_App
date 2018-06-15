@@ -5,6 +5,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
+      <p [hidden]="!invalidCredentials" class="text-center text-danger text-bold">Invalid login credentials</p>
 
       <form [formGroup]="loginForm" (ngSubmit)="login()">
 

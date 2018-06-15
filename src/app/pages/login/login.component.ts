@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { User } from '../../Interfaces/user';
-import { setJwtTokenInLocalstorage } from '../../app.utils';
+import { setJwtTokenInLocalstorage, setLoadingStatus } from '../../app.utils';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
     private loginForm: FormGroup;
+    private invalidCredentials: boolean;
 
     constructor(private router: Router, private formBuilder: FormBuilder, private userService: UserService) {
         this.createForm();
@@ -32,16 +33,25 @@ export class LoginComponent implements OnInit {
         const username = this.loginForm.get('username').value;
         const password = this.loginForm.get('password').value;
 
+        setLoadingStatus(true);
+
         this.userService.login(new User(username, password))
             .subscribe(resp => {
-                let jwtToken = resp.headers.get('Authorization');
-                jwtToken = jwtToken.slice(7);
-                setJwtTokenInLocalstorage(jwtToken);
-                this.navigateToHomePage();
+                if (resp) {
+                    let jwtToken = resp.headers.get('Authorization');
+                    jwtToken = jwtToken.slice(7);
+                    setJwtTokenInLocalstorage(jwtToken);
+                    this.navigateToHomePage();
+                } else {
+                    this.invalidCredentials = true;
+                }
+                setLoadingStatus(false);
             });
+
     }
 
     navigateToHomePage(): void {
         this.router.navigate(['/homepage']);
     }
+
 }

@@ -1,6 +1,9 @@
 import { JWT_TOKEN_KEY } from './app.constants';
 import { HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
+import { User } from './Interfaces/user';
+
+const jwt_decode = require('jwt-decode');
 
 export const jwtToken = localStorage.getItem(JWT_TOKEN_KEY);
 
@@ -10,6 +13,11 @@ export function setJwtTokenInLocalstorage(token: string) {
 
 export function removeJwtTokenFromLocalstorage() {
     localStorage.clear();
+}
+
+export function getUserInformation() {
+    const userInformation = jwt_decode(jwtToken);
+    return new User(userInformation.sub);
 }
 
 export const JSON_HEADERS = {

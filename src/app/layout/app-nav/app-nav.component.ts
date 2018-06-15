@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { removeJwtTokenFromLocalstorage } from '../../app.utils';
+import { getUserInformation, removeJwtTokenFromLocalstorage } from '../../app.utils';
+import { User } from '../../Interfaces/user';
 
 @Component({
     selector: 'app-nav',
@@ -9,10 +10,13 @@ import { removeJwtTokenFromLocalstorage } from '../../app.utils';
 })
 export class AppNavComponent implements OnInit {
 
+    private user: User;
+
     constructor(private location: Location) {
     }
 
     public ngOnInit() {
+        this.user = getUserInformation();
     }
 
     goBack(): void {

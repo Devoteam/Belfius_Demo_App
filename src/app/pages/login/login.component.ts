@@ -42,11 +42,13 @@ export class LoginComponent implements OnInit {
                     let jwtToken = resp.headers.get('Authorization');
                     jwtToken = jwtToken.slice(7);
                     localStorage.setItem(JWT_TOKEN_KEY, jwtToken);
+                    setLoadingStatus(false);
                     this.navigateToHomePage();
                 } else {
                     this.invalidCredentials = true;
+                    setLoadingStatus(false);
                 }
-                setLoadingStatus(false);
+
             });
 
     }

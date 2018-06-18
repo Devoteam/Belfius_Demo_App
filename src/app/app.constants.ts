@@ -15,9 +15,7 @@ export const LOGIN = `${BASE_API_URL}/login`;
 
 export const JWT_TOKEN_KEY = 'jwtToken';
 
-
-
 export const RequestParams = {
     CAR_BRAND_ID: 'carBrandId',
-    CAR_MODEL_ID: 'carBrandId'
+    CAR_MODEL_ID: 'carModelId'
 };

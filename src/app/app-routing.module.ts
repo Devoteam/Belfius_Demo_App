@@ -9,6 +9,7 @@ import { CarModelsComponent } from './pages/car-models/car-models.component';
 import { CarDetailComponent } from './pages/car-detail/car-detail.component';
 import { RequestParams } from './app.constants';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
     {
@@ -19,6 +20,7 @@ const routes: Routes = [
     {
         path: '',
         component: AppContentComponent,
+        canActivate: [AuthGuard],
         children: [
             {
                 component: HomepageComponent,

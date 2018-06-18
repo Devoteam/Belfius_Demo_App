@@ -7,8 +7,4 @@ export class User {
         this.password = password;
     }
 
-    constructor(username: string) {
-        this.username = username;
-    }
-
 }

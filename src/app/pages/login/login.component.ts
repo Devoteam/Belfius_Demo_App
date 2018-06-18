@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { User } from '../../Interfaces/user';
-import { setJwtTokenInLocalstorage, setLoadingStatus } from '../../app.utils';
+import { setLoadingStatus } from '../../app.utils';
 import { Router } from '@angular/router';
+import { JWT_TOKEN_KEY } from '../../app.constants';
 
 @Component({
     selector: 'app-login',
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit {
                 if (resp) {
                     let jwtToken = resp.headers.get('Authorization');
                     jwtToken = jwtToken.slice(7);
-                    setJwtTokenInLocalstorage(jwtToken);
+                    localStorage.setItem(JWT_TOKEN_KEY, jwtToken);
                     this.navigateToHomePage();
                 } else {
                     this.invalidCredentials = true;
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit {
     }
 
     navigateToHomePage(): void {
-        this.router.navigate(['/homepage']);
+        this.router.navigateByUrl('/homepage');
     }
 
 }

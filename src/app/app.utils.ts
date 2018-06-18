@@ -1,37 +1,20 @@
 import { JWT_TOKEN_KEY } from './app.constants';
-import { HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { User } from './Interfaces/user';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
-const jwt_decode = require('jwt-decode');
+const jwtHelper = new JwtHelperService();
 
 export const jwtToken = localStorage.getItem(JWT_TOKEN_KEY);
-
-export function setJwtTokenInLocalstorage(token: string) {
-    localStorage.setItem(JWT_TOKEN_KEY, token);
-}
 
 export function removeJwtTokenFromLocalstorage() {
     localStorage.clear();
 }
 
 export function getUserInformation() {
-    const userInformation = jwt_decode(jwtToken);
-    return new User(userInformation.sub);
+    const userInformation = jwtHelper.decodeToken(jwtToken);
+    return new User(userInformation.sub, null);
 }
-
-export const JSON_HEADERS = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-};
-
-export const JSON_HEADERS_WITH_RESPONSE = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'}),
-    observe: 'response'
-};
-
-export const AUTHORIZATION_HEADERS = {
-    headers: new HttpHeaders({'Authorization': `Bearer ${jwtToken}`}),
-};
 
 export function handleApiError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

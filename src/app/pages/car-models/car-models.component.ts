@@ -14,7 +14,7 @@ import { resizeWindow } from '../../app.utils';
 export class CarModelsComponent implements OnInit {
 
     private carModels: CarModel[];
-    private colAmount = 0;
+    private colAmount = 1;
 
     constructor(private carService: CarService,
                 private route: ActivatedRoute,

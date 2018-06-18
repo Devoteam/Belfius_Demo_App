@@ -12,7 +12,7 @@ import { resizeWindow } from '../../app.utils';
 export class CarOverviewComponent implements OnInit {
 
     private carBrands: CarBrand[];
-    private colAmount = 0;
+    private colAmount = 1;
 
     constructor(private carService: CarService,
                 media: ObservableMedia) {

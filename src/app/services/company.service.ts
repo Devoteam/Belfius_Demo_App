@@ -2,22 +2,22 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Car } from '../Interfaces/car';
+import { GET_ALL_COMPANIES } from '../app.constants';
 import { handleApiError } from '../app.utils';
-import { GAT_ALL_CARS_FOR_COMPANY } from '../app.constants';
+import { Company } from '../Interfaces/company';
 
 @Injectable({
     providedIn: 'root'
 })
-export class CarService {
+export class CompanyService {
 
     constructor(private http: HttpClient) {
     }
 
-    getAllCarsForcompany(companyId: number): Observable<Car[]> {
-        return this.http.get<Car[]>(`${GAT_ALL_CARS_FOR_COMPANY}${companyId}`)
+    getAllCompanies(): Observable<Company[]> {
+        return this.http.get<Company[]>(GET_ALL_COMPANIES)
             .pipe(
-                catchError(handleApiError('getAllCarsForcompany', []))
+                catchError(handleApiError('getAllCompanies', []))
             );
     }
 

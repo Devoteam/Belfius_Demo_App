@@ -5,9 +5,8 @@ import { AppContentComponent } from './layout/app-content/app-content.component'
 import { CarOverviewComponent } from './pages/car-overview/car-overview.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { CarModelsComponent } from './pages/car-models/car-models.component';
-import { CarDetailComponent } from './pages/car-detail/car-detail.component';
 import { RequestParams } from './app.constants';
+import { CompanyOverviewComponent } from './pages/company-overview/company-overview.component';
 
 const routes: Routes = [
     {
@@ -24,17 +23,17 @@ const routes: Routes = [
                 path: 'homepage'
             },
             {
+                component: CompanyOverviewComponent,
+                path: 'companies/overview'
+            },
+            {
                 component: CarOverviewComponent,
-                path: 'cars/overview'
+                path: `cars/overview/:${RequestParams.COMPANY_ID}`
             },
-            {
-                component: CarModelsComponent,
-                path: `cars/models/:${RequestParams.CAR_BRAND_ID}`
-            },
-            {
-                component: CarDetailComponent,
-                path: `cars/details/:${RequestParams.CAR_MODEL_ID}`
-            }
+            // {
+            //     component: CarDetailComponent,
+            //     path: `cars/details/:${RequestParams.CAR_MODEL_ID}`
+            // }
         ]
     },
     {

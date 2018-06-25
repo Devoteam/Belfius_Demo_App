@@ -5,17 +5,12 @@ const BASE_API_URL = environment.BASE_API_URL;
 
 // Cars
 const CAR_PREFIX = '/cars';
-const CAR_BRANDS_PREFIX = '/brands';
-const CAR_MODELS_PREFIX = '/models';
+export const GAT_ALL_CARS_FOR_COMPANY = `${BASE_API_URL}${CAR_PREFIX}/company/`;
 
-export const GET_ALL_CAR_BRANDS = `${BASE_API_URL}${CAR_PREFIX}${CAR_BRANDS_PREFIX}/all`;
-export const GET_CAR_MODELS_BY_BRAND_ID = `${BASE_API_URL}${CAR_PREFIX}${CAR_MODELS_PREFIX}?carBrandId=`;
-export const GET_CAR_BY_CAR_MODEL_ID = `${BASE_API_URL}${CAR_PREFIX}?carModelId=`;
-export const LOGIN = `${BASE_API_URL}/login`;
-
-export const JWT_TOKEN_KEY = 'jwtToken';
+// Companies
+const COMPANY_PREFIX = '/companies';
+export const GET_ALL_COMPANIES = `${BASE_API_URL}${COMPANY_PREFIX}/all`;
 
 export const RequestParams = {
-    CAR_BRAND_ID: 'carBrandId',
-    CAR_MODEL_ID: 'carModelId'
+    COMPANY_ID: 'companyId',
 };

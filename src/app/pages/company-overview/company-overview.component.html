@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="text-dark">Cars</h1>
+        <h1 class="text-dark">Companies</h1>
       </div>
     </div>
   </div>
@@ -13,9 +13,9 @@
 <div class="content">
   <div class="container-fluid">
     <mat-grid-list [cols]="colAmount" rowHeight="100px">
-      <mat-grid-tile *ngFor="let car of cars">
-        <mat-card class="mouse-pointer light-gray-hover col-lg-11" routerLink="/cars/detail/{{car.id}}">
-          <mat-card-title>{{car.name}}</mat-card-title>
+      <mat-grid-tile *ngFor="let company of companies">
+        <mat-card class="mouse-pointer light-gray-hover col-lg-11" routerLink="/cars/overview/{{company.id}}">
+          <mat-card-title>{{company.name}}</mat-card-title>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>

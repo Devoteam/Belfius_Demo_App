@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CarService } from '../../services/car.service';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { resizeWindow } from '../../app.utils';
+import { Car } from '../../Interfaces/car';
+import { ActivatedRoute } from '@angular/router';
+import { RequestParams } from '../../app.constants';
 
 @Component({
     selector: 'app-car-overview',
@@ -10,11 +13,10 @@ import { resizeWindow } from '../../app.utils';
 })
 export class CarOverviewComponent implements OnInit {
 
-    private carBrands: any[];
+    private cars: Car[];
     private colAmount = 1;
 
-    constructor(private carService: CarService,
-                media: ObservableMedia) {
+    constructor(private carService: CarService, private route: ActivatedRoute, private media: ObservableMedia) {
         resizeWindow();
         media.asObservable()
             .subscribe((change: MediaChange) => {
@@ -27,12 +29,13 @@ export class CarOverviewComponent implements OnInit {
     }
 
     public ngOnInit() {
-        this.getCarBrands();
+        this.getCarsForComapy();
     }
 
-    getCarBrands(): void {
-        this.carService.getCarBrands()
-            .subscribe(carBrands => this.carBrands = carBrands);
+    getCarsForComapy(): void {
+        const companyId = +this.route.snapshot.paramMap.get(RequestParams.COMPANY_ID);
+        this.carService.getAllCarsForcompany(companyId)
+            .subscribe(cars => this.cars = cars);
     }
 
 }

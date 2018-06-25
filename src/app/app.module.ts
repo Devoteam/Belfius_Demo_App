@@ -12,10 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { CarModelsComponent } from './pages/car-models/car-models.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarDetailComponent } from './pages/car-detail/car-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CompanyOverviewComponent } from './pages/company-overview/company-overview.component';
 
 const layout = [
     AppComponent,
@@ -28,8 +28,8 @@ const components = [
     HomepageComponent,
     NotFoundComponent,
     CarOverviewComponent,
-    CarModelsComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    CompanyOverviewComponent
 ];
 
 const modules = [

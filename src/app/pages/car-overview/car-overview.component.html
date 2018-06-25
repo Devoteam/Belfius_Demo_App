@@ -14,8 +14,8 @@
   <div class="container-fluid">
     <mat-grid-list [cols]="colAmount" rowHeight="100px">
       <mat-grid-tile *ngFor="let car of cars">
-        <mat-card class="mouse-pointer light-gray-hover col-lg-11" routerLink="/cars/detail/{{car.id}}">
-          <mat-card-title>{{car.name}}</mat-card-title>
+        <mat-card class="mouse-pointer light-gray-hover col-lg-11" routerLink="/cars/details/{{car.id}}">
+          <mat-card-title>{{car.model}}</mat-card-title>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>

@@ -4,7 +4,7 @@ import { catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Car } from '../Interfaces/car';
 import { handleApiError } from '../app.utils';
-import { GAT_ALL_CARS_FOR_COMPANY } from '../app.constants';
+import { GAT_ALL_CARS_FOR_COMPANY, GET_CAR_DETAILS_BY_ID } from '../app.constants';
 
 @Injectable({
     providedIn: 'root'
@@ -18,6 +18,13 @@ export class CarService {
         return this.http.get<Car[]>(`${GAT_ALL_CARS_FOR_COMPANY}${companyId}`)
             .pipe(
                 catchError(handleApiError('getAllCarsForcompany', []))
+            );
+    }
+
+    getCarDetailsById(carId: number): Observable<Car> {
+        return this.http.get<Car>(`${GET_CAR_DETAILS_BY_ID}${carId}`)
+            .pipe(
+                catchError(handleApiError('getCarDetailsById'))
             );
     }
 

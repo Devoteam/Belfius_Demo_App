@@ -3,6 +3,7 @@ import { CarService } from '../../services/car.service';
 import { Car } from '../../Interfaces/car';
 import { ActivatedRoute } from '@angular/router';
 import { resizeWindow } from '../../app.utils';
+import { RequestParams } from '../../app.constants';
 
 @Component({
     selector: 'app-car-detail',
@@ -14,17 +15,21 @@ export class CarDetailComponent implements OnInit {
     private car: Car;
     private carImagePath: string;
 
-    constructor(private carService: CarService,
-                private route: ActivatedRoute) {
+    constructor(private carService: CarService, private route: ActivatedRoute) {
         resizeWindow();
     }
 
     ngOnInit() {
-        // this.getCar();
+        this.getCarDetails();
     }
 
-    getCar(): void {
-        // const carModelId = +this.route.snapshot.paramMap.get(RequestParams.CAR_MODEL_ID);
+    getCarDetails(): void {
+        const carId = +this.route.snapshot.paramMap.get(RequestParams.CAR_ID);
+        this.carService.getCarDetailsById(carId)
+            .subscribe(car => {
+                this.car = car;
+                this.createCarImagePath(car.brand, car.model);
+            });
     }
 
     createCarImagePath(carBrandName, carModelName): void {

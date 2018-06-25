@@ -15,34 +15,14 @@
     <mat-card class="mb-4">
       <mat-card-title>
         <div class="row justify-content-between">
-          <div>test</div>
+          <div>{{car?.model}}</div>
           <div>
-            <small class="text-muted">test2</small>
+            <small class="text-muted">{{car?.brand}}</small>
           </div>
         </div>
       </mat-card-title>
       <hr>
       <img mat-card-image src="{{carImagePath}}" alt="Car Picture">
-      <mat-card-content>
-        <div class="row justify-content-center">
-          <h2>{{car?.cost | currency: 'EUR'}}</h2>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-6 text-center">
-            <h6>
-              <b>CO2-Emission:</b> {{car?.emission}}
-              <small class="text-muted">g/km</small>
-            </h6>
-          </div>
-          <div class="col-md-6 text-center">
-            <h6>
-              <b>Fuel consumption:</b> {{car?.fuelConsumption | number:'1.1-2'}}
-              <small class="text-muted">l/100 km</small>
-            </h6>
-          </div>
-        </div>
-      </mat-card-content>
     </mat-card>
   </div>
 </div>

@@ -7,6 +7,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RequestParams } from './app.constants';
 import { CompanyOverviewComponent } from './pages/company-overview/company-overview.component';
+import { CarDetailComponent } from './pages/car-detail/car-detail.component';
 
 const routes: Routes = [
     {
@@ -30,10 +31,10 @@ const routes: Routes = [
                 component: CarOverviewComponent,
                 path: `cars/overview/:${RequestParams.COMPANY_ID}`
             },
-            // {
-            //     component: CarDetailComponent,
-            //     path: `cars/details/:${RequestParams.CAR_MODEL_ID}`
-            // }
+            {
+                component: CarDetailComponent,
+                path: `cars/details/:${RequestParams.CAR_ID}`
+            }
         ]
     },
     {

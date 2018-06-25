@@ -24,7 +24,7 @@ export class CarService {
     getCarDetailsById(carId: number): Observable<Car> {
         return this.http.get<Car>(`${GET_CAR_DETAILS_BY_ID}${carId}`)
             .pipe(
-                catchError(handleApiError('getCarDetailsById'))
+                // catchError(handleApiError('getCarDetailsById'))
             );
     }
 

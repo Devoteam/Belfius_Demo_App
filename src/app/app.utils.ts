@@ -1,20 +1,4 @@
-import { JWT_TOKEN_KEY } from './app.constants';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { User } from './Interfaces/user';
-import { JwtHelperService } from '@auth0/angular-jwt';
-
-const jwtHelper = new JwtHelperService();
-
-export const jwtToken = localStorage.getItem(JWT_TOKEN_KEY);
-
-export function removeJwtTokenFromLocalstorage() {
-    localStorage.clear();
-}
-
-export function getUserInformation() {
-    const userInformation = jwtHelper.decodeToken(jwtToken);
-    return new User(userInformation.sub, null);
-}
 
 export function handleApiError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

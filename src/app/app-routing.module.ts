@@ -8,19 +8,16 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CarModelsComponent } from './pages/car-models/car-models.component';
 import { CarDetailComponent } from './pages/car-detail/car-detail.component';
 import { RequestParams } from './app.constants';
-import { LoginComponent } from './pages/login/login.component';
-import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
     {
-        path: 'login',
+        path: '',
         pathMatch: 'full',
-        component: LoginComponent,
+        redirectTo: 'homepage',
     },
     {
         path: '',
         component: AppContentComponent,
-        canActivate: [AuthGuard],
         children: [
             {
                 component: HomepageComponent,

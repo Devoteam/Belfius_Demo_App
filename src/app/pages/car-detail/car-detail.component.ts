@@ -29,7 +29,7 @@ export class CarDetailComponent implements OnInit {
         this.carService.getCar(carModelId)
             .subscribe(car => {
                 this.car = car;
-                this.createCarImagePath(car.carBrand.name, car.carModel.name);
+                this.createCarImagePath('BWM', 'BWM1');
             });
     }
 

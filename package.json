@@ -1,5 +1,5 @@
 {
-  "name": "car-app",
+  "name": "belfius-demo-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -23,7 +23,6 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "@auth0/angular-jwt": "^2.0.0",
     "admin-lte": "^3.0.0-alpha.2",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",

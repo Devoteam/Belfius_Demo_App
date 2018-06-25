@@ -1,4 +1,4 @@
-import { ErrorHandler, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppContentComponent } from './layout/app-content/app-content.component';
@@ -11,14 +11,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CarModelsComponent } from './pages/car-models/car-models.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarDetailComponent } from './pages/car-detail/car-detail.component';
-import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AuthInterceptor } from './interceptors/auth.interceptor';
-import { ErrorInterceptor } from './interceptors/error.interceptor';
 
 const layout = [
     AppComponent,
@@ -32,8 +29,7 @@ const components = [
     NotFoundComponent,
     CarOverviewComponent,
     CarModelsComponent,
-    CarDetailComponent,
-    LoginComponent
+    CarDetailComponent
 ];
 
 const modules = [
@@ -59,17 +55,7 @@ const routing = [
         modules,
         routing
     ],
-    providers: [
-        {
-            provide: ErrorHandler,
-            useClass: ErrorInterceptor,
-        },
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: AuthInterceptor,
-            multi: true
-        }
-    ]
+    providers: []
 })
 export class AppModule {
 }

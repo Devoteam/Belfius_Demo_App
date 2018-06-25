@@ -14,46 +14,18 @@
       </button>
     </li>
   </ul>
-  <!-- Right navbar -->
-  <ul class="navbar-nav ml-auto">
-    <!-- Profile icon -->
-    <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="fa fa-user-circle"></i>
-      </a>
-      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <!-- Header -->
-        <span class="dropdown-item dropdown-header">{{user.username}}</span>
-        <!-- Divider -->
-        <div class="dropdown-divider"></div>
-        <!-- Logout -->
-        <a (click)="logout()" routerLink="/login" class="dropdown-item dropdown-footer">Logout</a>
-      </div>
-    </li>
-  </ul>
-
 </nav>
 
 <!-- Left - Navbar -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Logo -->
   <a routerLink="/homepage" class="brand-link">
-    <img src="assets/images/angular.svg" alt="Angular Logo" class="brand-image img-circle elevation-3">
-    <span class="brand-text font-weight-light">Angular 6</span>
+    <img src="assets/images/belfius.png" alt="Angular Logo" class="brand-image elevation-3">
+    <span class="brand-text font-weight-light">Belfius</span>
   </a>
 
   <!-- Sidebar -->
   <div class="sidebar">
-    <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
-        <img src="assets/images/default-user.png" class="img-circle elevation-2" alt="User Image">
-      </div>
-      <div class="info">
-        <a class="d-block">{{user.username}}</a>
-      </div>
-    </div>
-
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

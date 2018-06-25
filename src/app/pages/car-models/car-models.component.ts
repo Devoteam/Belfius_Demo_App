@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CarModel } from '../../Interfaces/car-model';
 import { CarService } from '../../services/car.service';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { RequestParams } from '../../app.constants';
@@ -13,7 +12,7 @@ import { resizeWindow } from '../../app.utils';
 })
 export class CarModelsComponent implements OnInit {
 
-    private carModels: CarModel[];
+    private carModels: any[];
     private colAmount = 1;
 
     constructor(private carService: CarService,

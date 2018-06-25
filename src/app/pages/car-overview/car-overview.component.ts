@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../../services/car.service';
-import { CarBrand } from '../../Interfaces/car-brand';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { resizeWindow } from '../../app.utils';
 
@@ -11,7 +10,7 @@ import { resizeWindow } from '../../app.utils';
 })
 export class CarOverviewComponent implements OnInit {
 
-    private carBrands: CarBrand[];
+    private carBrands: any[];
     private colAmount = 1;
 
     constructor(private carService: CarService,

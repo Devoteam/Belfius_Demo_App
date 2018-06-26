@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node dist/BelfiusDemoApp/index.js",
+    "start": "node dist/BelfiusDemoApp/index.html",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

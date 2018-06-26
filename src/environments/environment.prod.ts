@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    BASE_API_URL: 'http://'
+    BASE_API_URL: 'http://gateway:8080'
 };

@@ -188,15 +188,13 @@ __webpack_require__.r(__webpack_exports__);
 
 // Base API URL
 var BASE_API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].BASE_API_URL;
-var COMPANY_OPENSHIFT_PREFIX = 'company';
-var CAR_OPENSHIFT_PREFIX = 'car';
 // Cars
 var CAR_PREFIX = '/cars';
-var GAT_ALL_CARS_FOR_COMPANY = "" + BASE_API_URL + CAR_OPENSHIFT_PREFIX + CAR_PREFIX + "/company/";
-var GET_CAR_DETAILS_BY_ID = "" + BASE_API_URL + CAR_OPENSHIFT_PREFIX + CAR_PREFIX + "/details/";
+var GAT_ALL_CARS_FOR_COMPANY = "" + BASE_API_URL + CAR_PREFIX + "/company/";
+var GET_CAR_DETAILS_BY_ID = "" + BASE_API_URL + CAR_PREFIX + "/details/";
 // Companies
 var COMPANY_PREFIX = '/companies';
-var GET_ALL_COMPANIES = "" + BASE_API_URL + COMPANY_OPENSHIFT_PREFIX + COMPANY_PREFIX + "/all";
+var GET_ALL_COMPANIES = "" + BASE_API_URL + COMPANY_PREFIX + "/all";
 var RequestParams = {
     COMPANY_ID: 'companyId',
     CAR_ID: 'carId',
@@ -1133,7 +1131,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
 var environment = {
     production: false,
-    BASE_API_URL: 'http://'
+    BASE_API_URL: 'http://gateway:8080'
 };
 
 

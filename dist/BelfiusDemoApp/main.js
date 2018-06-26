@@ -113,7 +113,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet>\r\n  <div [hidden]=\"!showLoader\" class=\"loading row align-items-center justify-content-center\">\r\n    <mat-spinner></mat-spinner>\r\n  </div>\r\n</router-outlet>\r\n"
+module.exports = "<router-outlet>\n  <div [hidden]=\"!showLoader\" class=\"loading row align-items-center justify-content-center\">\n    <mat-spinner></mat-spinner>\n  </div>\n</router-outlet>\n"
 
 /***/ }),
 
@@ -343,7 +343,7 @@ function setLoadingStatus(status) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<body class=\"hold-transition sidebar-mini\">\r\n  <div class=\"wrapper\">\r\n    <app-nav></app-nav>\r\n    <div class=\"content-wrapper bg-gray-light\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n    <app-footer></app-footer>\r\n  </div>\r\n</body>\r\n"
+module.exports = "<body class=\"hold-transition sidebar-mini\">\n  <div class=\"wrapper\">\n    <app-nav></app-nav>\n    <div class=\"content-wrapper bg-gray-light\">\n      <router-outlet></router-outlet>\n    </div>\n    <app-footer></app-footer>\n  </div>\n</body>\n"
 
 /***/ }),
 
@@ -406,7 +406,7 @@ var AppContentComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"main-footer\">\r\n  <strong>Copyright &copy; 2018.</strong>\r\n  All rights reserved.\r\n  <div class=\"float-right d-none d-sm-block\">\r\n    <b>Version</b> 1.0\r\n  </div>\r\n</footer>\r\n"
+module.exports = "<footer class=\"main-footer\">\n  <strong>Copyright &copy; 2018.</strong>\n  All rights reserved.\n  <div class=\"float-right d-none d-sm-block\">\n    <b>Version</b> 1.0\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -467,7 +467,7 @@ var AppFooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Top - Navbar -->\r\n<nav class=\"main-header navbar navbar-expand bg-gray navbar-light border-bottom\">\r\n  <!-- Left navbar -->\r\n  <ul class=\"navbar-nav\">\r\n    <li class=\"nav-item mouse-pointer\">\r\n      <a class=\"nav-link\" data-widget=\"pushmenu\">\r\n        <i class=\"fa fa-bars\"></i>\r\n      </a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <button mat-button (click)=\"goBack()\" class=\"nav-link\">\r\n        <i class=\"fa fa-angle-left\"></i>\r\n        Back\r\n      </button>\r\n    </li>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- Left - Navbar -->\r\n<aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n  <!-- Logo -->\r\n  <a routerLink=\"/homepage\" class=\"brand-link\">\r\n    <img src=\"assets/images/belfius.png\" alt=\"Angular Logo\" class=\"brand-image elevation-3\">\r\n    <span class=\"brand-text font-weight-light\">Belfius</span>\r\n  </a>\r\n\r\n  <!-- Sidebar -->\r\n  <div class=\"sidebar\">\r\n    <!-- Sidebar Menu -->\r\n    <nav class=\"mt-2\">\r\n      <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">\r\n        <li class=\"nav-header\">NAVIGATION</li>\r\n        <li class=\"nav-item\">\r\n          <a routerLink=\"/companies/overview\" routerLinkActive=\"active\" class=\"nav-link\">\r\n            <i class=\"nav-icon fa fa-home\"></i>\r\n            <p>Companies</p>\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</aside>\r\n"
+module.exports = "<!-- Top - Navbar -->\n<nav class=\"main-header navbar navbar-expand bg-gray navbar-light border-bottom\">\n  <!-- Left navbar -->\n  <ul class=\"navbar-nav\">\n    <li class=\"nav-item mouse-pointer\">\n      <a class=\"nav-link\" data-widget=\"pushmenu\">\n        <i class=\"fa fa-bars\"></i>\n      </a>\n    </li>\n    <li class=\"nav-item\">\n      <button mat-button (click)=\"goBack()\" class=\"nav-link\">\n        <i class=\"fa fa-angle-left\"></i>\n        Back\n      </button>\n    </li>\n  </ul>\n</nav>\n\n<!-- Left - Navbar -->\n<aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\n  <!-- Logo -->\n  <a routerLink=\"/homepage\" class=\"brand-link\">\n    <img src=\"assets/images/belfius.png\" alt=\"Angular Logo\" class=\"brand-image elevation-3\">\n    <span class=\"brand-text font-weight-light\">Belfius</span>\n  </a>\n\n  <!-- Sidebar -->\n  <div class=\"sidebar\">\n    <!-- Sidebar Menu -->\n    <nav class=\"mt-2\">\n      <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">\n        <li class=\"nav-header\">NAVIGATION</li>\n        <li class=\"nav-item\">\n          <a routerLink=\"/companies/overview\" routerLinkActive=\"active\" class=\"nav-link\">\n            <i class=\"nav-icon fa fa-home\"></i>\n            <p>Companies</p>\n          </a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</aside>\n"
 
 /***/ }),
 
@@ -620,7 +620,7 @@ var MaterialModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Header -->\r\n<div class=\"content-header\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row mb-2\">\r\n      <div class=\"col-sm-6\">\r\n        <h1 class=\"text-dark\">Car Details</h1>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Content -->\r\n<div class=\"content\">\r\n  <div class=\"container-fluid\">\r\n    <mat-card class=\"mb-4\">\r\n      <mat-card-title>\r\n        <div class=\"row justify-content-between\">\r\n          <div>{{car?.model}}</div>\r\n          <div>\r\n            <small class=\"text-muted\">{{car?.brand}}</small>\r\n          </div>\r\n        </div>\r\n      </mat-card-title>\r\n      <hr>\r\n      <img mat-card-image src=\"{{carImagePath}}\" alt=\"Car Picture\">\r\n    </mat-card>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<!-- Header -->\n<div class=\"content-header\">\n  <div class=\"container-fluid\">\n    <div class=\"row mb-2\">\n      <div class=\"col-sm-6\">\n        <h1 class=\"text-dark\">Car Details</h1>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Content -->\n<div class=\"content\">\n  <div class=\"container-fluid\">\n    <mat-card class=\"mb-4\">\n      <mat-card-title>\n        <div class=\"row justify-content-between\">\n          <div>{{car?.model}}</div>\n          <div>\n            <small class=\"text-muted\">{{car?.brand}}</small>\n          </div>\n        </div>\n      </mat-card-title>\n      <hr>\n      <img mat-card-image src=\"{{carImagePath}}\" alt=\"Car Picture\">\n    </mat-card>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -708,7 +708,7 @@ var CarDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Header -->\r\n<div class=\"content-header\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row mb-2\">\r\n      <div class=\"col-sm-6\">\r\n        <h1 class=\"text-dark\">Cars</h1>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Content -->\r\n<div class=\"content\">\r\n  <div class=\"container-fluid\">\r\n    <mat-grid-list [cols]=\"colAmount\" rowHeight=\"100px\">\r\n      <mat-grid-tile *ngFor=\"let car of cars\">\r\n        <mat-card class=\"mouse-pointer light-gray-hover col-lg-11\" routerLink=\"/cars/details/{{car.id}}\">\r\n          <mat-card-title>{{car.model}}</mat-card-title>\r\n        </mat-card>\r\n      </mat-grid-tile>\r\n    </mat-grid-list>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<!-- Header -->\n<div class=\"content-header\">\n  <div class=\"container-fluid\">\n    <div class=\"row mb-2\">\n      <div class=\"col-sm-6\">\n        <h1 class=\"text-dark\">Cars</h1>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Content -->\n<div class=\"content\">\n  <div class=\"container-fluid\">\n    <mat-grid-list [cols]=\"colAmount\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let car of cars\">\n        <mat-card class=\"mouse-pointer light-gray-hover col-lg-11\" routerLink=\"/cars/details/{{car.id}}\">\n          <mat-card-title>{{car.model}}</mat-card-title>\n        </mat-card>\n      </mat-grid-tile>\n    </mat-grid-list>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -803,7 +803,7 @@ var CarOverviewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Header -->\r\n<div class=\"content-header\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row mb-2\">\r\n      <div class=\"col-sm-6\">\r\n        <h1 class=\"text-dark\">Companies</h1>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Content -->\r\n<div class=\"content\">\r\n  <div class=\"container-fluid\">\r\n    <mat-grid-list [cols]=\"colAmount\" rowHeight=\"100px\">\r\n      <mat-grid-tile *ngFor=\"let company of companies\">\r\n        <mat-card class=\"mouse-pointer light-gray-hover col-lg-11\" routerLink=\"/cars/overview/{{company.id}}\">\r\n          <mat-card-title>{{company.name}}</mat-card-title>\r\n        </mat-card>\r\n      </mat-grid-tile>\r\n    </mat-grid-list>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<!-- Header -->\n<div class=\"content-header\">\n  <div class=\"container-fluid\">\n    <div class=\"row mb-2\">\n      <div class=\"col-sm-6\">\n        <h1 class=\"text-dark\">Companies</h1>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Content -->\n<div class=\"content\">\n  <div class=\"container-fluid\">\n    <mat-grid-list [cols]=\"colAmount\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let company of companies\">\n        <mat-card class=\"mouse-pointer light-gray-hover col-lg-11\" routerLink=\"/cars/overview/{{company.id}}\">\n          <mat-card-title>{{company.name}}</mat-card-title>\n        </mat-card>\n      </mat-grid-tile>\n    </mat-grid-list>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -891,7 +891,7 @@ var CompanyOverviewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content-header\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row mb-2\">\r\n      <div class=\"col-sm-6\">\r\n        <h1 class=\"m-0 text-dark\"></h1>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"content\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row justify-content-center mb-5\">\r\n      <h1>Welcome to the Belfius demo application!</h1>\r\n    </div>\r\n    <div class=\"row justify-content-center\">\r\n      <img src=\"assets/images/belfius.png\" alt=\"Angular Logo\">\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"content-header\">\n  <div class=\"container-fluid\">\n    <div class=\"row mb-2\">\n      <div class=\"col-sm-6\">\n        <h1 class=\"m-0 text-dark\"></h1>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"content\">\n  <div class=\"container-fluid\">\n    <div class=\"row justify-content-center mb-5\">\n      <h1>Welcome to the Belfius demo application!</h1>\n    </div>\n    <div class=\"row justify-content-center\">\n      <img src=\"assets/images/belfius.png\" alt=\"Angular Logo\">\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -958,7 +958,7 @@ var HomepageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--Content-->\r\n<section class=\"content\">\r\n    <!--404-->\r\n    <div class=\"error-page\">\r\n        <h2 class=\"headline text-yellow\">404</h2>\r\n        <div class=\"error-content\">\r\n            <h3><i class=\"fa fa-warning text-yellow\"></i> Oops! Page not found.</h3>\r\n            <p>\r\n                Page not found, go back to <a [routerLink]=\"['/homepage']\">homepage</a>.\r\n            </p>\r\n        </div>\r\n    </div>\r\n</section>\r\n"
+module.exports = "<!--Content-->\n<section class=\"content\">\n    <!--404-->\n    <div class=\"error-page\">\n        <h2 class=\"headline text-yellow\">404</h2>\n        <div class=\"error-content\">\n            <h3><i class=\"fa fa-warning text-yellow\"></i> Oops! Page not found.</h3>\n            <p>\n                Page not found, go back to <a [routerLink]=\"['/homepage']\">homepage</a>.\n            </p>\n        </div>\n    </div>\n</section>\n"
 
 /***/ }),
 
@@ -1131,7 +1131,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
 var environment = {
     production: false,
-    BASE_API_URL: 'http://gateway:8080'
+    BASE_API_URL: 'http://company:8080'
 };
 
 
@@ -1173,7 +1173,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\maittah\IdeaProjects\Demo-belfius\Belfius_Demo_App\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\abruynsee\Documents\Projects\Belfius_Demo_App\src\main.ts */"./src/main.ts");
 
 
 /***/ })

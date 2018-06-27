@@ -15,6 +15,7 @@ export class CarService {
     }
 
     getAllCarsForcompany(companyId: number): Observable<Car[]> {
+        console.log(`${GAT_ALL_CARS_FOR_COMPANY}${companyId}`);
         return this.http.get<Car[]>(`${GAT_ALL_CARS_FOR_COMPANY}${companyId}`)
             .pipe(
                 catchError(handleApiError('getAllCarsForcompany', []))
@@ -22,6 +23,7 @@ export class CarService {
     }
 
     getCarDetailsById(carId: number): Observable<Car> {
+        console.log(`${GET_CAR_DETAILS_BY_ID}${carId}`);
         return this.http.get<Car>(`${GET_CAR_DETAILS_BY_ID}${carId}`)
             .pipe(
                 // catchError(handleApiError('getCarDetailsById'))

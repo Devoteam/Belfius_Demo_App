@@ -15,6 +15,7 @@ export class CompanyService {
     }
 
     getAllCompanies(): Observable<Company[]> {
+        console.log(GET_ALL_COMPANIES);
         return this.http.get<Company[]>(GET_ALL_COMPANIES)
             .pipe(
                 catchError(handleApiError('getAllCompanies', []))

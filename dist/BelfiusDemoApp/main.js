@@ -1049,10 +1049,12 @@ var CarService = /** @class */ (function () {
         this.http = http;
     }
     CarService.prototype.getAllCarsForcompany = function (companyId) {
+        console.log("" + _app_constants__WEBPACK_IMPORTED_MODULE_4__["GAT_ALL_CARS_FOR_COMPANY"] + companyId);
         return this.http.get("" + _app_constants__WEBPACK_IMPORTED_MODULE_4__["GAT_ALL_CARS_FOR_COMPANY"] + companyId)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(Object(_app_utils__WEBPACK_IMPORTED_MODULE_3__["handleApiError"])('getAllCarsForcompany', [])));
     };
     CarService.prototype.getCarDetailsById = function (carId) {
+        console.log("" + _app_constants__WEBPACK_IMPORTED_MODULE_4__["GET_CAR_DETAILS_BY_ID"] + carId);
         return this.http.get("" + _app_constants__WEBPACK_IMPORTED_MODULE_4__["GET_CAR_DETAILS_BY_ID"] + carId)
             .pipe();
     };
@@ -1103,6 +1105,7 @@ var CompanyService = /** @class */ (function () {
         this.http = http;
     }
     CompanyService.prototype.getAllCompanies = function () {
+        console.log(_app_constants__WEBPACK_IMPORTED_MODULE_3__["GET_ALL_COMPANIES"]);
         return this.http.get(_app_constants__WEBPACK_IMPORTED_MODULE_3__["GET_ALL_COMPANIES"])
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(Object(_app_utils__WEBPACK_IMPORTED_MODULE_4__["handleApiError"])('getAllCompanies', [])));
     };
@@ -1131,7 +1134,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
 var environment = {
     production: false,
-    BASE_API_URL: 'http://company:8080'
+    BASE_API_URL: 'http://gateway-demo.40.114.214.208.nip.io'
 };
 
 
